@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Elite Fan Assessment - Official Basketball IQ Evaluation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="NBA.png" type="image/png">
+</head>
+
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <div class="header">
+            <img src="NBA.png" alt="NBA Logo" class="nba-logo">
+            <h1>NBA Elite Fan Assessment</h1>
+            <p class="subtitle">Official Basketball IQ Evaluation System</p>
+        </div>
+
+        <div class="content">
+            <div class="intro-box">
+                <h2>Prove Your Basketball Knowledge</h2>
+                <p>Welcome to the official NBA Fan Assessment. This comprehensive evaluation will test your basketball IQ, game knowledge, and fan loyalty through a series of challenges.</p>
+                <p><strong>Assessment includes:</strong></p>
+                <ul>
+                    <li>Basketball Knowledge Quiz</li>
+                    <li>Interactive Mini-Games</li>
+                    <li>Fan Loyalty Analysis</li>
+                    <li>Official Certification</li>
+                </ul>
+                <button id="start-btn" class="primary-btn">Begin Assessment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Page -->
+    <div id="registration-page" class="page">
+        <div class="header">
+            <img src="NBA.png" alt="NBA Logo" class="nba-logo">
+            <h1>Fan Registration</h1>
+        </div>
+
+        <div class="content">
+            <div class="form-box">
+                <h2>Enter Your Information</h2>
+                <form id="registration-form">
+                    <div class="input-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="favorite-player">Favorite Current Player:</label>
+                        <input type="text" id="favorite-player" name="favorite-player" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="favorite-team">Favorite Team:</label>
+                        <select id="favorite-team" name="favorite-team" required>
+                            <option value="">Select a team...</option>
+                            <option value="lakers">Los Angeles Lakers</option>
+                            <option value="warriors">Golden State Warriors</option>
+                            <option value="celtics">Boston Celtics</option>
+                            <option value="thunder">Oklahoma City Thunder</option>
+                            <option value="nuggets">Denver Nuggets</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="primary-btn">Continue to Assessment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page" class="page">
+        <div class="header">
+            <img src="NBA.png" alt="NBA Logo" class="nba-logo">
+            <h1>Basketball Knowledge Quiz</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="quiz-progress"></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="quiz-box">
+                <div id="question-container">
+                    <h3 id="question-text"></h3>
+                    <div id="answer-options"></div>
+                </div>
+                <button id="next-question" class="primary-btn" style="display: none;">Next Question</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mini Game 1: Shot Clock Challenge -->
+    <div id="minigame1-page" class="page">
+        <div class="header">
+            <img src="NBA.png" alt="NBA Logo" class="nba-logo">
+            <h1>Shot Clock Challenge</h1>
+        </div>
+
+        <div class="content">
+            <div class="game-box">
+                <h2>Test Your Reaction Time</h2>
+                <p>Click the basketball when the shot clock hits exactly 10 seconds!</p>
+
+                <div class="shot-clock-display">
+                    <div id="shot-clock">24</div>
+                </div>
+
+                <div class="basketball-container">
+                    <div id="basketball" class="basketball">🏀</div>
+                </div>
+
+                <button id="start-game1" class="primary-btn">Start Challenge</button>
+                <div id="game1-result" class="result-display"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mini Game 2: Court Vision Test -->
+    <div id="minigame2-page" class="page">
+        <div class="header">
+            <img src="NBA.png" alt="NBA Logo" class="nba-logo">
+            <h1>Court Vision Test</h1>
+        </div>
+
+        <div class="content">
+            <div class="game-box">
+                <h2>Find the Real Basketball</h2>
+                <p>One of these basketballs is the real one. Use your court vision to find it!</p>
+
+                <div id="court-vision-grid" class="vision-grid">
+                    <!-- Basketballs will be generated here -->
+                </div>
+
+                <button id="start-game2" class="primary-btn">Start Test</button>
+                <div id="game2-result" class="result-display"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Page -->
+    <div id="loading-page" class="page">
+        <div class="header">
+            <img src="NBA.png" alt="NBA Logo" class="nba-logo">
+            <h1>Processing Results</h1>
+        </div>
+
+        <div class="content">
+            <div class="loading-box">
+                <div class="spinner"></div>
+                <h2>Analyzing Your Performance...</h2>
+                <div id="loading-text">Evaluating basketball knowledge...</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="loading-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Results Page -->
+    <div id="results-page" class="page">
+        <div class="header">
+            <img src="NBA.png" alt="NBA Logo" class="nba-logo">
+            <h1>Assessment Complete</h1>
+        </div>
+
+        <div class="content">
+            <div class="results-box">
+                <div class="certificate">
+                    <h2>OFFICIAL CERTIFICATION</h2>
+                    <div class="cert-content">
+                        <h3 id="final-name">AYDEN</h3>
+                        <p class="cert-title">CERTIFIED BANDWAGON FAN</p>
+                        <div class="roast-content">
+                            <img src="download.jpg" alt="Tyrese Haliburton" class="haliburton-img">
+                            <div class="roast-text">
+                                <h2>You've been played, Ayden!</h2>
+                                <h2>Get a job you fuckin looser</h2>
+                                <h1 class="hali-diff">HALIBURTON DIFFS</h1>
+                            </div>
+                        </div>
+                        <audio id="roast-audio" autoplay>
+                            <source src="Record (online-voice-recorder.com) (1) (1) (4).mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
